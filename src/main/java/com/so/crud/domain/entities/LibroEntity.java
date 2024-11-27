@@ -24,7 +24,7 @@ public class LibroEntity {
 
     private Integer anoPublicacion;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "libros_autores",
             joinColumns = @JoinColumn(name = "libro_id"),

@@ -25,6 +25,6 @@ public class AutorEntity {
 
     private String nacionalidad;
 
-    @ManyToMany(mappedBy = "autores")
+    @ManyToMany(mappedBy = "autores", cascade = CascadeType.ALL)
     private Set<LibroEntity> libros = new HashSet<>();
 }
